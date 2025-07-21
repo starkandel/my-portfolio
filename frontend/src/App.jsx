@@ -5,7 +5,9 @@ import About from './pages/About';
 import Projects from './pages/Projects';
 import Services from './pages/Services';
 import Contact from './pages/Contact';
+import Counter from './conter';
 import './App.css';
+import Rating from './conter';
 
 function App() {
   return (
@@ -18,6 +20,7 @@ function App() {
           <Route path="/projects" element={<Projects />} />
           <Route path="/services" element={<Services />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/counter" element={<Rating />} />
         </Routes>
       </div>
     </Router>

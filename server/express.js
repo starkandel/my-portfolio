@@ -25,8 +25,6 @@ app.use("/", userRoutes);
 app.use("/", educationRoutes);
 app.use("/", projectRoutes);
 
-// ❌ Remove duplicate userRoutes
-// ❌ Remove body-parser (redundant)
 
 app.use((err, req, res, next) => {
     if (err.name === "UnauthorizedError") {

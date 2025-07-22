@@ -3,7 +3,8 @@ import compression from 'compression';
 import config from '../config/config.js';
 
 const protect = (req, res, next) => {
-    const token = req.cookies.token;
+    // const token = req.cookies.token;
+    const token = req.headers['authorization']?.split(' ')[1];
 
     if (!token)
         return res.status(401).json({ message: 'Access Denied: No token provided' });

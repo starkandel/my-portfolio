@@ -5,7 +5,7 @@ import protect from '../middleware/auth.middleware.js';
 const router = express.Router();
 
 
-router.get('/api/qualifications', protect, qualificationsController.getEducations);
+router.get('/api/qualifications', qualificationsController.getEducations);
 router.get('/api/qualifications/:id', protect, qualificationsController.getEducationById);
 router.post('/api/qualifications', protect, qualificationsController.createEducation);
 router.put('/api/qualifications/:id', protect, qualificationsController.updateEducation);

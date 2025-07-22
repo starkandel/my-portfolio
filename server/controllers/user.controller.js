@@ -117,7 +117,7 @@ const loginUser = async (req, res) => {
         maxAge: 60 * 60 * 1000, // 1 hour
     });
 
-    res.json({ message: 'Login successful', accessToken: token, user: { id: user._id, name: user.name } });
+    res.json({ message: 'Login successful', accessToken: token, user: { id: user._id, name: user.name, role: user.role } });
 };
 
 // Logout User

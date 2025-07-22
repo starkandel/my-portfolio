@@ -8,7 +8,7 @@ router.post('/api/login', usersController.loginUser);
 router.post('/api/logout', usersController.logoutUser);
 router.get('/api/users', protect, usersController.getAllUsers);
 router.get('/api/users/:id', protect, usersController.getUserById);
-router.post('/api/users', protect, usersController.createUser);
+router.post('/api/users', usersController.createUser);
 router.put('/api/users/:id', protect, usersController.updateUser);
 router.delete('/api/users/:id', protect, usersController.deleteUser);
 router.delete('/api/users', protect, usersController.deleteAllUsers);

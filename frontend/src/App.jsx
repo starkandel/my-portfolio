@@ -5,11 +5,12 @@ import About from './pages/About';
 import Projects from './pages/Projects';
 import Services from './pages/Services';
 import Contact from './pages/Contact';
-import Counter from './conter';
+import SignUpForm from './pages/signup';
+import SignInForm from './pages/signin';
 import './App.css';
-import Rating from './conter';
 
 function App() {
+  const user = JSON.parse(localStorage.getItem('user'));
   return (
     <Router>
       <Navbar />
@@ -20,7 +21,8 @@ function App() {
           <Route path="/projects" element={<Projects />} />
           <Route path="/services" element={<Services />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/counter" element={<Rating />} />
+          <Route path="/signup" element={<SignUpForm />} />
+          <Route path="/signin" element={<SignInForm />} />
         </Routes>
       </div>
     </Router>

@@ -3,6 +3,7 @@ import cookieParser from "cookie-parser";
 import compress from "compression";
 import cors from "cors";
 import helmet from "helmet";
+import path from 'path'
 
 import contactRoutes from "./routes/contact.routes.js";
 import educationRoutes from "./routes/education.routes.js";
@@ -10,6 +11,8 @@ import projectRoutes from "./routes/project.routes.js";
 import userRoutes from "./routes/user.routes.js";
 
 const app = express();
+const CURRENT_WORKING_DIR = process.cwd();
+app.use(express.static(path.join(CURRENT_WORKING_DIR, "dist/app")));
 
 // ✅ Apply middleware BEFORE routes
 app.use(express.json());

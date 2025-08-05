@@ -1,4 +1,4 @@
-import myphoto from '../assets/myphoto.jpg';
+import React from 'react';
 
 const Home = () => {
     return (
